@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #screen{
+            width: 100%;
+            height: 2000px;
+            border: 5px solid red;
+            box-sizing: border-box;
+        }
+        #product{
+            width: 100%;
+            height: 2000px;
+            border: 5px solid blue;
+            display: flex;
+            justify-content: space-around;
+        }
+        #product >div:nth-child(1){
+            width: 60%;
+            height: 800px;
+            /* border:5px solid pink; */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        #product >div:nth-child(1) >div {
+            width: 49%;
+            height: 500px;
+            /* border: 1px solid pink; */
+        }
+        
+        #product >div:nth-child(1) >div > img {
+            width: 100%;
+            height: 100%;
+        }
+        #product >div:nth-child(2) {
+            width: 35%;
+            height: 2000px;
+            border: 5px solid pink;
+        }
+        #info {
+            width: 95%;
+            height: 800px;
+            border: 5px solid yellow;
+        }
+        #info >div:nth-child(1){
+            width: 95%;
+            margin: auto;
+            height: 55px;
+            /* border: 2px solid red; */
+            margin-bottom: 15px;
+        }
+        #info >div:nth-child(1) >h2 {
+            margin-top: 0;
+            font-size: 18px;
+            margin-bottom: 0px;
+        }
+        #info >div:nth-child(1) >p {
+            font-size: 10px;
+            margin-top: 0;
+        }
+        #info >div:nth-child(2){
+            width: 95%;
+            margin: auto;
+            height: 50px;
+            /* border: 2px solid red; */
+            margin-bottom: 15px;
+        }
+        #info >div:nth-child(2) >h2 {
+            margin-top: 0;
+            font-size: 18px;
+            margin-bottom: 0px;
+        }
+        #info >div:nth-child(2) >p{
+            font-size: 12px;
+            color: rgb(14, 194, 134);
+        }
+        #info >div:nth-child(3){
+            width: 95%;
+            margin: auto;
+            height: 65px;
+            /* border: 2px solid red; */
+            margin-bottom: 15px;
+            display: flex;
+        }
+        #info >div:nth-child(3) >h3 {
+            font-size: 15px;
+            margin-top: 0;
+        }
+        #info >div:nth-child(3) >h4 {
+            font-size: 13px;
+            color: rgb(226, 24, 199);
+            margin-top: 0;
+            
+        }
+        #info >div:nth-child(3) >input {
+            margin-top: 20px;
+            margin-inline-end: 20px;
+        }
+        #info >div:nth-child(4){
+            width: 95%;
+            margin: auto;
+            margin-bottom: 10px;
+            height: 55px;
+            /* border: 2px solid red; */
+        }
+        #check >div:nth-child(1) >input{
+            width: 40%;
+            height: 40px;
+            margin-top: 10px;
+            color: white;
+            background-color: rgb(241, 47, 167);
+        }
+        #delivery {
+            width: 95%;
+            height: 60px;
+            margin: auto;
+            margin-bottom: 10px;
+            /* border: 2px solid red; */
+        }
+        #delivery >h3 {
+            font-size: 15px;
+            margin-top: 0;
+        }
+        #delivery >input {
+            margin: 0;
+        }
+        #productinfo {
+            width: 95%;
+            height: 112px;
+            margin: auto;
+            margin-bottom: 20px;
+            /* border: 2px solid red; */
+        }
+        #productinfo >div:nth-child(1) >p{
+            margin-top: 0;
+            font-size: 13px;
+            color: rgb(104, 102, 102);
+        }
+        #bestoffers {
+            width: 95%;
+            height: 160px;
+            /* border: 5px solid red; */
+            margin: auto;
+        }
+        #bestoffers >div:nth-child(1) {
+            width: 100%;
+            height: 40px;
+            /* border: 5px solid red; */
+            display: flex;
+            
+        }
+        #bestoffers >div:nth-child(1) >h3 {
+            font-size: 15px;
+            margin: 0;
+        }
+        #bestoffers >div:nth-child(2) >h3{
+            font-size: 15px;
+            margin: 0;
+        }
+        #bestoffers >div:nth-child(2) >ul{
+            font-size: 13px;
+            color: rgb(104, 102, 102);    
+        }
+        #bestoffers >div:nth-child(2) >ul >li{
+            margin-left: -20px;
+
+        }
+        #bestoffers >div:nth-child(2) >h4 {
+            color: rgb(241, 47, 167);
+            font-size: 14px;
+        }
+        #discount {
+            width: 95%;
+            height: 65px;
+            /* border: 2px solid red; */
+            margin-bottom: 10px;
+        }
+        #discount >h3{
+            font-size: 14px;
+            margin: 0;
+        }
+        #discount >ul {
+            font-size: 12px;
+            margin-left: -25px;
+            color: rgb(104, 102, 102);
+        }
+        #discount >h4 {
+            font-size: 14px;
+            margin-top: -5px;
+            color: rgb(241, 47, 167);
+        }
+        #emi {
+            width: 100%;
+            height: 100px;
+            /* border: 2px solid red; */
+        }
+        #emi >h3{
+            font-size: 14px;
+            margin: 0;
+        }
+        #emi >ul {
+            font-size: 12px;
+            margin-left: -25px;
+            color: rgb(104, 102, 102);
+        }
+        #emi >h4 {
+            font-size: 14px;
+            margin-top: -5px;
+            color: rgb(241, 47, 167);
+        }
+        #speci {
+            width: 100%;
+            height: 240px;
+            /* border: 2px solid red; */
+            margin-top: 20px;
+        }
+        #speci >div:nth-child(1) >h3{
+            font-size: 15px;
+            margin-top: 0;
+            margin-bottom: 8px;
+
+        }
+        #speci >div:nth-child(1) >p {
+            font-size: 13px;
+            margin-bottom: 20px;
+            color: rgb(104, 102, 102);
+        }
+        #speci >div:nth-child(2) >h3{
+            font-size: 15px;
+            margin-top: 0;
+            margin-bottom: 8px;
+
+        }
+        #speci >div:nth-child(2) >p {
+            font-size: 13px;
+            margin-bottom: 15px;
+            color: rgb(104, 102, 102);
+        }
+        #speci >div:nth-child(3) >h3{
+            font-size: 15px;
+            margin-top: 0;
+            margin-bottom: 8px;
+
+        }
+       
+        #speci >div:nth-child(3) >p {
+            font-size: 13px;
+            margin-bottom: 20px;
+            color: rgb(104, 102, 102);
+        }
+        #speci >div:nth-child(3) >h4{
+            font-size: 15px;
+            margin-top: -5px;
+            margin-bottom: 0px;
+
+        }
+        #specification {
+            width: 100%;
+            height: 235px;
+            border: 2px solid red;
+            margin-top: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+        #specification >div:nth-child(1){
+            width: 45%;
+            height: 230px;
+            /* border: 2px solid red; */
+            margin-top: 2px;
+        }
+        #specification >div:nth-child(1) >h3 {
+            margin-bottom: 2px;
+            margin-top: 0;
+            font-size: 13px;
+            color: rgb(104, 102, 102);
+        }
+        #specification >div:nth-child(1) >p {
+            margin-bottom: 5px;
+            margin-top: 0;
+            font-size: 11px;
+            color: rgb(104, 102, 102);
+        }
+        #specification >div:nth-child(2){
+            width: 45%;
+            height: 230px;
+            /* border: 2px solid red; */
+            margin-top: 2px;
+            
+        }
+        #specification >div:nth-child(2) >h3 {
+            margin-bottom: 2px;
+            margin-top: 0;
+            font-size: 13px;
+            color: rgb(104, 102, 102);
+        }
+        #specification >div:nth-child(2) >p {
+            margin-bottom: 5px;
+            margin-top: 0;
+            font-size: 11px;
+            color: rgb(104, 102, 102);
+        }
+        #specification >div:nth-child(1) >h4 {
+            margin-top: 15px;
+            color: rgb(241, 47, 167);
+            
+        }
+        #rating {
+            width: 100%;
+            height: 100px;
+            border: 2px solid red;
+            display: flex;
+        }
+        #rating >div:nth-child(1) >h3{
+            width: 50%;
+            height: 50px;
+            border: 2px solid pink;
+        }
+        #rating >div:nth-child(2){
+            width: 50%;
+            height: 50px;
+            border: 2px solid pink;
+        }
+        #rating >div:nth-child(3){
+            width: 50%;
+            height: 50px;
+            border: 2px solid pink;
+        }
+       
+
+    </style>
+</head>
+<body>
+    <div id="screen">
+        <div>Navbar</div>
+        <div>Home/Clothing/Men Clothing/Tshirts/Minions By Kook N Keech Tshirts>More By Minions By Kook N Keech</div>
+        <div id="product">
+            <div>
+                <div>
+                    <img src="https://cdn.shopify.com/s/files/1/0752/6435/products/IMG_0053_5c650849-9d9d-4cc3-8863-6a23778cd9a0.jpg?v=1675170808"/>
+                </div>
+                <div>
+                    <img src="https://cdn.shopify.com/s/files/1/0752/6435/products/IMG_0053_5c650849-9d9d-4cc3-8863-6a23778cd9a0.jpg?v=1675170808"/>
+                </div>
+                <div>
+                    <img src="https://cdn.shopify.com/s/files/1/0752/6435/products/IMG_0053_5c650849-9d9d-4cc3-8863-6a23778cd9a0.jpg?v=1675170808"/>
+                </div>
+                <div>
+                    <img src="https://cdn.shopify.com/s/files/1/0752/6435/products/IMG_0053_5c650849-9d9d-4cc3-8863-6a23778cd9a0.jpg?v=1675170808"/>
+                </div>
+                <div>
+                    <img src="https://cdn.shopify.com/s/files/1/0752/6435/products/IMG_0053_5c650849-9d9d-4cc3-8863-6a23778cd9a0.jpg?v=1675170808"/>
+                </div>
+            </div>
+            <div id="info">
+                <div>
+                    <h2>Minions by Kook N Keech</h2>
+                    <p>Men Purple Boxy Fit Printed Round Neck Pure Cotton T-shirt</p>
+                    <p>4.2 2.8k Ratings</p>
+                </div>
+                <div><h2>₹571 MRP ₹1099 (48% OFF)</h2>
+                    <p>inclusive of all taxes</p>
+                </div>
+            <div>
+                <h3>SELECT SIZE</h3>
+                <h4>SIZE CHART</h4>
+                <input type="button" value="M"/>
+                <input type="button" value="L"/>
+                <input type="button" value="XL"/>
+                <input type="button" value="XXL"/>
+            </div>
+            <div id="check">
+                <div>
+                    <input type="submit" value="ADD TO BAG"/>
+                    <input type="submit" value="WISHLIST"/>
+                </div>    
+            </div>
+            <div id="delivery">
+                <h3>DELIVERY OPTIONS</h3>
+                <input type="number" placeholder="Enter pin code"/>
+            </div>
+            <div id="productinfo">
+                <div>
+                    <p>100% Original Products</p>
+                    <p>Pay on delivery might be available</p>
+                    <p>Easy 14 days returns and exchanges</p>
+                    <p> Try & Buy might be available </p>
+                </div>
+            </div>
+            <div id="bestoffers">
+                <div>
+                    <h3>BEST OFFERS</h3>
+                </div>
+                <div>
+                    <h3>BEST PRICE :RS 512</h3><ul>
+                    <li>Applicable on: Orders above Rs. 899 (only on first purchase)</li>
+                    <li>Coupon code: MYNTRA200</li>
+                    <li>Coupon Discount: Rs. 147 off (check cart for final savings)</li></ul>
+                    <h4>View Eligible Products</h4>
+                </div>
+                <div id="discount">
+                    <h3>10% Instant Discount on RuPay Credit Cards</h3>
+                    <ul>
+                        <li>Min Spend Rs 2,000, Max Discount Rs 500.</li>
+                    </ul>
+                    <h4>Terms & Condition</h4>
+                </div>
+            <div id="emi">
+                <h3>EMI option available</h3>
+                <ul>
+                    <li>EMI starting from Rs.27/month</li>
+                </ul>
+                <h4>View Plan</h4>
+            </div>
+              <hr>
+            <div id="speci">
+                <div>
+                    <h3>PRODUCT DETAILS </h3>
+                    <p>Purple printed T-shirt, has a round neck, short sleeves</p>
+                </div>
+                <div>
+                    <h3>Size & Fit </h3>
+                    <p>Boxy Fit<br>
+                        The model (height 6') is wearing a size M</p>
+                </div>
+                <div>
+                    <h3>Material & Care</h3>
+                    <p>100% Cotton<br>
+                        Machine-wash</p>
+                    <h4>Specifications</h4>    
+                </div>
+            </div>
+            <div id="specification">
+                <div>
+                    <p>Character</p> 
+                       <h3> Minions</h3>
+                        <hr>
+                        <p>Fit </p>
+                            <h3> Boxy</h3>
+                            <hr>
+                            <p>Main Trend</p> 
+                            <h3> Graphic Print and Others</h3>
+                                <hr>
+                                <p>Neck </p>
+                                <h3> Round Neck</h3>
+                                    <hr>
+                                    <h4>See More</h4>
+                                    
+                </div>
+                <div>
+                    <p>Fabric</p> 
+                       <h3> Pure Cotton</h3>
+                        <hr>
+                        <p>Length </p>
+                            <h3> Regular</h3>
+                            <hr>
+                            <p>Mutipack Set</p> 
+                            <h3> Single</h3>
+                                <hr>
+                                <p>Occasion </p>
+                                <h3>Casual</h3>
+                                    <hr>
+                </div>
+            </div><hr>
+            <div id="rating">
+                <div>
+                    <h3>RATINGS</h3>
+                </div>
+                
+                <div>cssc</div>
+                <div>scss</div>
+            </div>    
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
