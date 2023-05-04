@@ -137,7 +137,7 @@
             margin: 18px 10px;
             color: rgb(112, 109, 109);
         }
-        .in >input{
+        .in >form >input{
             width: 70%;
             height: 30px;
             margin: 20px 20px 0px 60px;
@@ -249,19 +249,25 @@
                 <h3>Login</h3><p>to continue</p>
             </div>
             <div class="in">
-                <input type="text" placeholder="Enter your Email"/><br>
-                <input type="password" placeholder="Enter your Password"/>
+                <form onsubmit="login(event)">
+                <input id="Myntrauseremail" type="text" placeholder="Enter your Email"/><br>
+                <input id="Myntrauserpassword" type="password" placeholder="Enter your Password"/>
+                <input type="submit" value="Login"/>
+                </form>
             </div>
             <div class="text">
                 <h5>By continuing, I agree to the</h5><p>Terms of Use</p><h5>&</h5><p>Privacy Policy</p>
             </div>
-            <div class="button">
+            <!-- <div class="button">
                 <button>CONTINUE</button>
-            </div>
+            </div> -->
             <div class="text2">
                 <h5>Having trouble logging in?</h5><p>Get Help</p>
             </div>
         </div>
     </div>
+
+
+    <script src="./Myntra2.js"></script>
 </body>
 </html>

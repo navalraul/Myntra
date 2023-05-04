@@ -10,6 +10,14 @@
         *{
             font-family: Assistant,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
         }
+        #screen {
+            width: 100%;
+            /* height: 1500px; */
+            /* border: 5px solid red; */
+        }
+        #screen >div {
+            margin-bottom: 50px;
+        }
         #navbar {
             width: 100%;
             height: 90px;
@@ -17,6 +25,7 @@
             display: flex;
             position: -webkit-sticky;
             position: sticky;
+            top: 0px;
         }
         #navbar >div:nth-child(1){
             width: 55%;
@@ -97,99 +106,147 @@
             margin: 5px 5px 0px 15px ;
             font-size: 12px;
         }
-        
-        #body {
+        #products {
             width: 100%;
-            height: 500px;
+            height: 1000px;
+            border: 2px solid red;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        #singlepro {
+            width: 18%;
+            border: 1px solid black;
+        }
+        #footer {
+            width: 100%;
+            height: 600px;
             /* border: 2px solid red; */
-            background-color: #fdefeb;
-            margin: 2px 0px;
+            background-color: rgb(235, 229, 229);
         }
-        #body >div:nth-child(1) {
-            width: 37%;
-            height: 150px;
-            /* border: 2px solid gold; */
-            margin: 10px 350px 0px 430px;
-        }
-        #body >div:nth-child(1) >img {
+        #footer >div:nth-child(1){
             width: 100%;
-            height: 150px;
+            height: 400px;
+            /* border: 2px solid red; */
+            display: flex;
+            justify-content: center;
         }
-        #body >div:nth-child(2) {
-            width: 37%;
-            height: 350px;
-            /* border: 2px solid gold; */
-            margin: 0px 430px;
+        .fooup >div:nth-child(1){
+            width: 20%;
+            height: 400px;
+            /* border: 1px solid gold; */
         }
-        #body >div:nth-child(2) >div:nth-child(1) {
+        .fooup >div:nth-child(1) >h5 {
+            margin: 20px 0px 20px 0px;
+            font-size: 12px;
+        }
+        .fooup >div:nth-child(1) >p {
+            margin: 0px 0px 8px 0px;
+            font-size: 13px;
+            color: gray;
+        }
+        .fooup >div:nth-child(2){
+            width: 20%;
+            height: 400px;
+            /* border: 1px solid gold; */
+        }
+        .fooup >div:nth-child(2) >h5 {
+            margin: 20px 0px 20px 0px;
+            font-size: 12px;
+        }
+        .fooup >div:nth-child(2) >p {
+            margin: 0px 0px 8px 0px;
+            font-size: 13px;
+            color: gray;
+        }
+        .fooup >div:nth-child(3){
+            width: 20%;
+            height: 400px;
+            /* border: 1px solid gold; */
+        }
+        .fooup >div:nth-child(3) >h5 {
+            font-size: 12px;
+        }
+        .fooup >div:nth-child(3) >div:nth-child(2){
+            display: flex;
+        }
+        .fooup >div:nth-child(3) >div:nth-child(2) >img {
+            width: 40%;
+        }
+        .fooup >div:nth-child(3) >div:nth-child(2) >img:hover{
+            cursor: pointer;
+        }
+        .fooup >div:nth-child(3) >div:nth-child(4) >img{
+            width: 7%;
+        }
+        .fooup >div:nth-child(3) >div:nth-child(4) >img:hover{
+            cursor: pointer;
+        }
+        .fooup >div:nth-child(4){
+            width: 20%;
+            height: 400px;
+            /* border: 1px solid gold; */
+        }
+        .fooup >div:nth-child(4) >div:nth-child(1) {
+            display: flex;
+        }
+        .fooup >div:nth-child(4) >div:nth-child(1) >img {
+            width: 18%;
+            height: 45px;
+            margin: 20px 5px;
+        }
+        .fooup >div:nth-child(4) >div:nth-child(1) >div >h5 {
+            margin-bottom: 0px;
+        }
+        .fooup >div:nth-child(4) >div:nth-child(1) >div >span {
+            font-size: 11px;
+            color: gray;
+        }
+
+        .fooup >div:nth-child(4) >div:nth-child(2) {
+            display: flex;
+        }
+        .fooup >div:nth-child(4) >div:nth-child(2) >img {
+            width: 15%;
+            height: 45px;
+            margin: 20px 10px;
+        }
+        .fooup >div:nth-child(4) >div:nth-child(2) >div >h5 {
+            margin-bottom: 0px;
+        }
+        .fooup >div:nth-child(4) >div:nth-child(2) >div >span {
+            font-size: 11px;
+            color: gray;
+        }
+        #footer >div:nth-child(2){
             width: 100%;
+            height: 200px;
+            /* border: 2px solid red; */
+        }
+        .foodo >div:nth-child(1){
+            width: 81%;
+            height: 150px;
+            /* border: 1px solid gold; */
+            margin: 0px 130px;
+        }
+        .foodo >div:nth-child(1) >h5 {
+            font-size: 12px;
+        }
+        .foodo >div:nth-child(1) >p {
+            font-size: 14px;
+            color: gray;
+        }
+        .foodo >div:nth-child(2){
+            width: 81%;
             height: 50px;
-            /* border: 2px solid black; */
+            /* border: 1px solid gold; */
+            margin: 0px 130px;
             display: flex;
+            justify-content: space-between;
         }
-        .log >h3{
-            font-size: 35px;
-            margin: 10px 5px 10px 60px;
-            color: rgb(94, 91, 91);
-        }
-        .log >p {
-            font-size: 25px;
-            margin: 18px 10px;
-            color: rgb(112, 109, 109);
-        }
-        .in >form >input{
-            width: 70%;
-            height: 30px;
-            margin: 20px 20px 0px 60px;
-        }
-        .text {
-            display: flex;
-            margin: 5px 60px;
-        }
-        .text >h5 {
-            font-size: 13px;
+        .foodo >div:nth-child(2) >div >h5{
+            margin: 0px;
             color: gray;
-            font-weight: lighter;
-        }
-        .text >p {
-            font-size: 12px;
-            color: #f55778;
-            margin: 22px 5px;
-            font-weight: bold;
-        }
-        .text >p:hover{
-            cursor: pointer;
-        }
-        .button >input{
-            width: 70%;
-            height: 40px;
-            background-color: #f55778;
-            /* border: 1px solid #f55778; */
-            font-size: 15px;
-            color: snow;
-            font-weight: bold;
-            margin: 5px 60px;
-        }
-        .button >button:hover{
-            cursor: pointer;
-        }
-        .text2 {
-            display: flex;
-        }
-        .text2 >h5 {
-            font-size: 12px;
-            margin: 15px 0px 0px 60px;
-            font-weight: bold;
-            color: gray;
-        }
-        .text2 >p {
-            font-size: 13px;
-            margin: 13px 5px;
-            color: #f55778;
-            font-weight: bold;
-        }
-        .text2 >p:hover{
-            cursor: pointer;
         }
     </style>
 </head>
@@ -225,6 +282,11 @@
                 <input type="text" placeholder="Search for products,brands and more"/>
             </div>
             <div>
+                <div id="switch">
+                    <button onclick="window.location.href=`./HotstarLogin.html`">Login</button>
+                    <button onclick="window.location.href=`./HotstarRegister.html`">Register</button>
+                </div>
+                <div id="logout"></div>
                 <div>
                     <i class="fa-regular fa-user"></i>
                     <h4>Profile</h4>
@@ -240,35 +302,99 @@
             </div>
         </div>
     </div>
-    <div id="body">
-        <div>
-            <img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/2023/1/25/f5e9a029-33c3-4a92-811b-ef7917fe6d441674670210687-offer-banner-300-600x240-code-_-MYNTRA300.jpg"/>
+    <div id="products"></div>
+    <div id="footer">
+        <div class="fooup">
+            <div>
+                <h5>ONLINE SHOPPING</h5>
+                <p>Men</p>
+                <p>Women</p>
+                <p>Kids</p>
+                <p>Home&Living</p>
+                <p>Beauty</p>
+                <p>Gift Cards</p>
+                <p>Myntra Insider</p>
+                <h5>USEFUL LINKS</h5>
+                <p>Blog</p>
+                <p>Careers</p>
+                <p>Site Map</p>
+                <p>Corporate Information</p>
+                <p>Whitehat</p>
+            </div>
+            <div>
+                <h5>CUSTOMER POLICIES</h5>
+                <p>Contact Us</p>
+                <p>FAQ</p>
+                <p>T&C</p>
+                <p>Terms Of Use</p>
+                <p>Track Orders</p>
+                <p>Shipping</p>
+                <p>Cancellation</p>
+                <p>Returns</p>
+                <p>Privacy Policy</p>
+                <p>Grevience Officer</p>
+            </div>
+            <div>
+                <h5>EXPERIENCE MYNTRA APP ON MOBILE</h5>
+                <div>
+                    <img src="https://constant.myntassets.com/web/assets/img/80cc455a-92d2-4b5c-a038-7da0d92af33f1539674178924-google_play.png"/>
+                    <img src="https://constant.myntassets.com/web/assets/img/bc5e11ad-0250-420a-ac71-115a57ca35d51539674178941-apple_store.png"/>
+                </div>
+                <h5>KEEP IN TOUCH</h5>
+                <div>
+                    <img src="https://constant.myntassets.com/web/assets/img/d2bec182-bef5-4fab-ade0-034d21ec82e31574604275433-fb.png"/>
+                    <img src="https://constant.myntassets.com/web/assets/img/f10bc513-c5a4-490c-9a9c-eb7a3cc8252b1574604275383-twitter.png"/>
+                    <img src="https://constant.myntassets.com/web/assets/img/a7e3c86e-566a-44a6-a733-179389dd87111574604275355-yt.png"/>
+                    <img src="https://constant.myntassets.com/web/assets/img/b4fcca19-5fc1-4199-93ca-4cae3210ef7f1574604275408-insta.png"/>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://constant.myntassets.com/web/assets/img/6c3306ca-1efa-4a27-8769-3b69d16948741574602902452-original.png"/>
+                    <div>
+                    <h5>100% ORIGINAL</h5><span>guarantee for all products at myntra.com</span>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://constant.myntassets.com/web/assets/img/ef05d6ec-950a-4d01-bbfa-e8e5af80ffe31574602902427-30days.png"/>
+                    <div>
+                    <h5>Return within 30days</h5><span>of receiving your order</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div>
-            <div class="log">
-                <h3>Register</h3><p>to continue</p>
+        <div class="foodo">
+            <div>
+                <h5>POPULAR SEARCHES</h5>
+                <p>Adidas | Arrow | Fila | Online Shopping | Nike | Pepe | Jeans | Puma | United Colors of Benetton | Fastrack | Shorts | Being Human | Skirts | Woodland | Supra | Dresses | Clothing | Jewellery | T-shirts | Shoes | Bags | Watches | Caps | Shirts | Backpacks | Flip Flops | Sunglasses | Kurtas | Lingerie | Jackets | Skechers | Saree | Sandals | Puma Tshirts | Woodland Shoes | Titan Watches | Fastrack Watches | Wrangler Shirts | Adidas Tshirts | Nike Shoes | Roadster Shirts | Casual Shoes | Running Shoes | Nike Sports Shoes | Jeans | Being Human Tshirts | Converse Shoes | Cricket Shoes</p>
             </div>
-            <div class="in">
-                <form onsubmit="Register(event)">
-                <input id="Myntausername" type="text" placeholder="Enter your Name"/><br>
-                <input id="Myntrauseremail" type="text" placeholder="Enter your Email"/><br>
-                <input id="Myntrauserpassword" type="password" placeholder="Enter your Password"/><br>
-                <input id="Myntrauserconformpassword" type="password" placeholder="Confirm your password"/>
-                <input type="submit" value="Register"/>
-                </form>
-            </div>
-            <div class="text">
-                <h5>By continuing, I agree to the</h5><p>Terms of Use</p><h5>&</h5><p>Privacy Policy</p>
-            </div>
-            <!-- <div class="button">
-                <input type="submit" value="Register"/>
-            </div> -->
-            <div class="text2">
-                <h5>Having trouble logging in?</h5><p>Get Help</p>
+            <div>
+                <div>
+                <h5>In case of any concern, Contact Us</h5>
+                </div>
+                <div>
+                    <h5>© 2023 www.myntra.com. All rights reserved.</h5>
+                </div>
             </div>
         </div>
     </div>
 
-    <script src="./Myntra.js"></script>
+
+    <script>
+        window.onload = function(){
+            // alert("working")
+            var divToShowProducts = document.getElementById("products");
+            var finalData = "";
+
+            var productsFromLS = JSON.parse(localStorage.getItem("Products"));
+            for (var i=0;i <productsFromLS.length;i++){
+                // console.log(productsFromLS[i],'productFromLS')
+                finalData += `<div id='singlepro'><img src =${productsFromLS[i].proImage} /><h3>${productsFromLS[i].proName}</h3><p>${productsFromLS[i].proPrice}</p></div>`
+            }
+            console.log(finalData,"finalData here")
+            divToShowProducts.innerHTML = finalData;
+
+        }
+    </script>
 </body>
 </html>
