@@ -283,8 +283,8 @@
             </div>
             <div>
                 <div id="switch">
-                    <button onclick="window.location.href=`./HotstarLogin.html`">Login</button>
-                    <button onclick="window.location.href=`./HotstarRegister.html`">Register</button>
+                    <button onclick="window.location.href=`./MyntraLogin.html`">Login</button>
+                    <button onclick="window.location.href=`./MyntraRegister.html`">Register</button>
                 </div>
                 <div id="logout"></div>
                 <div>
@@ -378,7 +378,30 @@
             </div>
         </div>
     </div>
+    <script>
+        window.onload = function () {
+            alert("working")
+            var currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
+            if (!!currentUser){
+                var logoutDiv = document.getElementById("logout");
+                var divFromHtml = document.getElementById("switch");
+
+                var button = '<button onclick="logout()">Logout</button>'
+                var name = `<h1>${currentUser.userName}</h1>`;
+                divFromHtml.innerHTML = name;
+                logoutDiv.innerHTML = button;
+            }else {
+                alert("Current User Absent")
+            }
+            console.log(currentUser,"userName")
+        }
+        function logout(){
+            alert("Working")
+            localStorage.removeItem("currentUser");
+            window.location.reload();
+        }
+    </script>
 
     <script>
         window.onload = function(){

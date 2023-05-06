@@ -17,7 +17,7 @@ function login (event){
     }
     if (flag == true) {
         localStorage.setItem("currentUser",JSON.stringify(currentUser))
-        window.location.href = './Myntra1.html';
+        window.location.href = './MyntraMulti.html';
         alert("Login Successful")
     }else {
         alert("Credential not Matched")
