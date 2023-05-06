@@ -380,6 +380,17 @@
     </div>
     <script>
         window.onload = function () {
+            var divToShowProducts = document.getElementById("products");
+            var finalData = "";
+
+            var productsFromLS = JSON.parse(localStorage.getItem("Products"));
+            for (var i=0;i <productsFromLS.length;i++){
+                // console.log(productsFromLS[i],'productFromLS')
+                finalData += `<div onclick ='redirect(${JSON.stringify(productsFromLS[i])})'id='singlepro'><img src =${productsFromLS[i].proImage} /><h3>${productsFromLS[i].proName}</h3><p>${productsFromLS[i].proPrice}</p></div>`;
+            }
+            console.log(finalData,"finalData here")
+            divToShowProducts.innerHTML = finalData;
+
             alert("working")
             var currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
@@ -394,16 +405,24 @@
             }else {
                 alert("Current User Absent")
             }
-            console.log(currentUser,"userName")
+            console.log(currentUser,"userEmail")
         }
         function logout(){
             alert("Working")
             localStorage.removeItem("currentUser");
             window.location.reload();
         }
+        
+        function redirect(product) {
+            var singleproduct = JSON.stringify(product);
+
+            localStorage.setItem("current-product",singleproduct);
+            window.location.href = './Singleproduct.html'
+        }
+        
     </script>
 
-    <script>
+    <!-- <script>
         window.onload = function(){
             // alert("working")
             var divToShowProducts = document.getElementById("products");
@@ -424,6 +443,6 @@
             localStorage.setItem("current-product",singleproduct);
             window.location.href = './Singleproduct.html'
         }
-    </script>
+    </script> -->
 </body>
 </html>
