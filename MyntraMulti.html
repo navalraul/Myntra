@@ -106,9 +106,9 @@
             margin: 5px 5px 0px 15px ;
             font-size: 12px;
         }
-        #products {
+        #Myntraproducts {
             width: 100%;
-            height: 1000px;
+            height: 500px;
             border: 2px solid red;
             display: flex;
             justify-content: space-between;
@@ -302,7 +302,7 @@
             </div>
         </div>
     </div>
-    <div id="products"></div>
+    <div id="Myntraproducts"></div>
     <div id="footer">
         <div class="fooup">
             <div>
@@ -380,10 +380,10 @@
     </div>
     <script>
         window.onload = function () {
-            var divToShowProducts = document.getElementById("products");
+            var divToShowProducts = document.getElementById("Myntraproducts");
             var finalData = "";
 
-            var productsFromLS = JSON.parse(localStorage.getItem("Products"));
+            var productsFromLS = JSON.parse(localStorage.getItem("MyntraProducts"));
             for (var i=0;i <productsFromLS.length;i++){
                 // console.log(productsFromLS[i],'productFromLS')
                 finalData += `<div onclick ='redirect(${JSON.stringify(productsFromLS[i])})'id='singlepro'><img src =${productsFromLS[i].proImage} /><h3>${productsFromLS[i].proName}</h3><p>${productsFromLS[i].proPrice}</p></div>`;
@@ -392,7 +392,7 @@
             divToShowProducts.innerHTML = finalData;
 
             alert("working")
-            var currentUser = JSON.parse(localStorage.getItem("currentUser"));
+            var currentUser = JSON.parse(localStorage.getItem("MyntracurrentUser"));
 
             if (!!currentUser){
                 var logoutDiv = document.getElementById("logout");
@@ -409,14 +409,14 @@
         }
         function logout(){
             alert("Working")
-            localStorage.removeItem("currentUser");
+            localStorage.removeItem("MyntracurrentUser");
             window.location.reload();
         }
         
-        function redirect(product) {
-            var singleproduct = JSON.stringify(product);
+        function redirect(Myntraproduct) {
+            var singleproduct = JSON.stringify(Myntraproduct);
 
-            localStorage.setItem("current-product",singleproduct);
+            localStorage.setItem("Myntracurrent-product",singleproduct);
             window.location.href = './Singleproduct.html'
         }
         

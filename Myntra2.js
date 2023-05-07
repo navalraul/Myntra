@@ -7,16 +7,16 @@ function login (event){
 
     var Ls = JSON.parse(localStorage.getItem("MyntraUsers"));
 
-    var currentUser;
+    var MyntracurrentUser;
     var flag = false;
     for (var i=0;i< Ls.length;i++) {
         if (Ls[i].userEmail == userEmail && Ls[i].userPassword == userPassword) {
             flag = true;
-            currentUser = Ls[i];
+            MyntracurrentUser = Ls[i];
         }
     }
     if (flag == true) {
-        localStorage.setItem("currentUser",JSON.stringify(currentUser))
+        localStorage.setItem("MyntracurrentUser",JSON.stringify(MyntracurrentUser))
         window.location.href = './MyntraMulti.html';
         alert("Login Successful")
     }else {
