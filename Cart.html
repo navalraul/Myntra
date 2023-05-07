@@ -6,6 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* #Myntraproducts {
+            width: 50%;
+            height: 50px;
+            border: 1px solid red;
+        } */
+    </style>
 </head>
 
 <body>
@@ -27,9 +34,9 @@
                 }
             }
 
-            console.log(Myntraproducts, 'products here')
+            console.log(products, 'products here')
             var finalData = "";
-            for (var i = 0; i < userData.length; i++) {
+            for (var i = 0; i < products.length; i++) {
                 finalData += `<div><img src='${products[i].proImage}'/><br><h2 '${products[i].proName}'></h2><br><p'${products[i].proPrice}'></p></div>`
             }
             // console.log(finalData,'finalData')
