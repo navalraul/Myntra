@@ -178,14 +178,14 @@
             var product = JSON.parse(localStorage.getItem("Myntracurrent-product"));
 
             var divToAppendProduct = document.getElementById("singleproduct");
-            var structure = `<div id='singlePro'> <img src='${product.proImage}' /> <br/> <h1>${product.proName}</h1><br/> <p>${product.proPrice}</p><br/> <button onclick='addCart(${JSON.stringify(product)})'>Add to cart</button> </div>`
+            var structure = `<div onlick  'redirect(${JSON.stringify(productfromLS[i])})' id='singlePro'> <img src='${product.proImage}' /> <br/> <h1>${product.proName}</h1><br/> <p>${product.proPrice}</p><br/> <button onclick='addCart(${JSON.stringify(product)})'>Add to cart</button> </div>`
             console.log(structure,"here");
             divToAppendProduct.innerHTML = structure;
 
         }
         
         function addCart(product) {
-            alert ("Adding to cart..")
+            // alert ("Adding to cart..")
             var currentUser = JSON.parse(localStorage.getItem("MyntracurrentUser"));
 
             var userData = JSON.parse(localStorage.getItem("MyntraUsers"));

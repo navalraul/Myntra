@@ -384,7 +384,7 @@
             var finalData = "";
 
             var productsFromLS = JSON.parse(localStorage.getItem("MyntraProducts"));
-            for (var i=0;i <productsFromLS.length;i++){
+            for (var i=0;i < productsFromLS.length;i++){
                 // console.log(productsFromLS[i],'productFromLS')
                 finalData += `<div onclick ='redirect(${JSON.stringify(productsFromLS[i])})'id='singlepro'><img src =${productsFromLS[i].proImage} /><h3>${productsFromLS[i].proName}</h3><p>${productsFromLS[i].proPrice}</p></div>`;
             }
@@ -405,7 +405,7 @@
             }else {
                 alert("Current User Absent")
             }
-            console.log(currentUser,"userEmail")
+            // console.log(currentUser,"userEmail")
         }
         function logout(){
             alert("Working")
