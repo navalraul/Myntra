@@ -178,7 +178,7 @@
             var product = JSON.parse(localStorage.getItem("Myntracurrent-product"));
 
             var divToAppendProduct = document.getElementById("singleproduct");
-            var structure = `<div onlick  'redirect(${JSON.stringify(productfromLS[i])})' id='singlePro'> <img src='${product.proImage}' /> <br/> <h1>${product.proName}</h1><br/> <p>${product.proPrice}</p><br/> <button onclick='addCart(${JSON.stringify(product)})'>Add to cart</button> </div>`
+            var structure = `<div onlick  'redirect(${JSON.stringify(product)})' id='singlePro'> <img src='${product.proImage}' /> <br/> <h1>${product.proName}</h1><br/> <p>${product.proPrice}</p><br/> <button onclick='addCart(${JSON.stringify(product)})'>Add to cart</button> </div>`
             console.log(structure,"here");
             divToAppendProduct.innerHTML = structure;
 
@@ -192,13 +192,13 @@
             var flagForUser = false;
             for (var i=0;i< userData.length;i++){
                 if(currentUser.email === userData[i].email){
-                    alert("Got")
+                    // alert("Got")
                     if(userData[i].cartProducts == undefined) {
                         userData[i].cartProducts = [product];
                     }else {
                         userData[i].cartProducts.push(product);
                     }
-                    alert("Product added to cart");
+                    // alert("Product added to cart");
                     window.location.href = './Cart.html'
                 }
             }
